@@ -13,6 +13,8 @@ router.get('/api/auth/token', async function (req, res, next) {
             access_token: token.access_token,
             expires_in: token.expires_in    
         });
+
+        console.log(token.access_token)
     } catch (err) {
         next(err);
     }
